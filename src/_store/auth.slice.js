@@ -37,6 +37,7 @@ function createReducers() {
 
 function createExtraActions() {
     const baseUrl = `${process.env.REACT_APP_API_URL}/users`;
+    // const baseUrl = `${process.env.REACT_APP_API_URL}/users`;
 
     return {
         login: login(),
@@ -56,7 +57,7 @@ function createExtraActions() {
 
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('auth', JSON.stringify(user));
-
+                    
                     // get return url from location state or default to home page
                     const { from } = history.location.state || { from: { pathname: '/' } };
                     history.navigate(from);

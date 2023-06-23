@@ -1,0 +1,57 @@
+Scenario:
+1. Registration:
+A user can register in the app using by giving first_name, last_name, username,
+password and selecting a role (&quot;USER&quot; i.e normal user or &quot;AUDITOR&quot; i.e. auditor
+user)
+2. Login:
+i) A user can login into the app by providing the username and password .
+ii) While logging in the user&#39;s loginTime and clientIp should be recorded for the
+current login of the
+user.
+iii) A user can navigate to different pages based on the role of the user .
+a. A normal user can navigate to &quot;Dasboard Page&quot;
+b. A user with auditor role can navigate to both &quot;Dasboard Page&quot; and
+&quot;Audit Page&quot;. A user with auditor role should always navigate to
+&quot;Audit Page&quot; first and can navigate to &quot;Dasboard Page&quot; from the
+top menu.
+3. Dashboard Page :
+On Dashboard page , a logged in user can see all the users registerd in the app.
+4. Audit Page:
+On Audit page, a logged in user with auditor role can see history of all users with
+their roles along with their login/logout time. A normal user should not be able
+to navigate to Audit Page.
+5. Logout:
+A user can logout from the top menu. On logging out the logout time for the
+current login of the user should be recorded.
+Please clone the repositories to perform the task.
+• You need to checkout one UI repository on to your local system
+UI Based on your preference choose one
+- Angular https://gitlab.com/byteridge/interviews/angular-ui-project-
+new
+- React.js https://gitlab.com/byteridge/interviews/react-ui-project-new
+- Vue.js https://gitlab.com/byteridge/interviews/evaluation-demo-
+web-vue-vuex.git 
+
+Please read the following instructions carefully and follow
+sequentially.
+• Following is the existing behaviour of the code :
+User can login and logout, register as a normal user and as an audit user.
+• Following are set of tasks you need to complete to be successful in this
+round
+1. On Login :
+• User with AUDITOR role should always navigate to audit page
+first and can navigate to dashboard page from the top menu.
+• User without AUDITOR role can navigate to a dashboard page
+and does not see a button to navigate to the audit page.
+
+2. Within the “Audit” pages:
+
+•  Data is displayed as a list - Implement a table with pagination – use
+a Data Table to display the data along with pagination, sorting (for
+username,firstname , lastname) and search( by name)
+• Format date as DD/MM/YYYY hh;mm:ss, add a dropdown above the
+table to change date/time format from 12hr to 24hr. (Created Date is
+coming in the response of the API called)
+
+Once you have completed the tasks commit your code (API) to separate public
+repository on GitHub/Gitlab/Bitbucket Zip the source code folders and share in email.
